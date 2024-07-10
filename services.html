@@ -25,23 +25,22 @@
             margin-bottom: 20px;
         }
 
-        .trip-block {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
+        .trip-card {
             margin-bottom: 20px;
         }
 
-        .trip-block h3 {
-            margin-top: 0;
+        .trip-card img {
+            height: 200px;
+            object-fit: cover;
         }
 
-        .trip-block p {
-            margin: 0;
+        .trip-card .card-body {
+            display: flex;
+            flex-direction: column;
         }
 
-        .search-box {
-            margin-bottom: 15px;
+        .trip-card .btn {
+            align-self: flex-start;
         }
     </style>
 </head>
@@ -56,13 +55,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="index.html#services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="index.html#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -83,25 +82,48 @@
             </div>
             <div class="col-md-8">
                 <h2>Have you been here already?</h2>
-                <div class="trip-block">
-                    <h3>Barcelona (3 Days - City Trip)</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna vitae odio commodo varius.</p>
-                    <a href="#" class="btn btn-primary">Learn more</a>
+                <div class="card trip-card">
+                    <img src="resources/pexels-oidonnyboy-5282585.jpg" class="card-img-top" alt="Barcelona">
+                    <div class="card-body">
+                        <h5 class="card-title">Barcelona (3 Days - City Trip)</h5>
+                        <p class="card-text">Barcelona is a vibrant city located on the northeastern coast of Spain. With its stunning architecture, rich history, and lively atmosphere, it is a must-visit destination for travelers. Explore the iconic works of Antoni Gaudí, such as the Sagrada Familia and Park Güell, which showcase the unique blend of Gothic and modernist styles. Take a stroll along Las Ramblas, a bustling pedestrian street filled with shops, cafes, and street performers. Indulge in delicious tapas and paella, and experience the vibrant nightlife in the city's trendy bars and clubs. Whether you're interested in art, history, or simply soaking up the Mediterranean sun, Barcelona has something for everyone.</p>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
                 </div>
-                <div class="trip-block">
-                    <h3>Andalusia (14 Days - Round Trip)</h3>
-                    <p>Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-                    <a href="#" class="btn btn-primary">Learn more</a>
+                <div class="card trip-card">
+                    <img src="resources/pexels-adriannacalvo-22033733.jpg" class="card-img-top" alt="Andalusia">
+                    <div class="card-body">
+                        <h5 class="card-title">Andalusia (14 Days - Round Trip)</h5>
+                        <p class="card-text">Andalusia is a breathtaking region in southern Spain known for its rich history, stunning landscapes, and vibrant culture. Explore the enchanting cities of Seville, Granada, and Cordoba, each offering unique architectural wonders such as the Alhambra Palace, the Mezquita, and the Alcazar. Immerse yourself in the vibrant flamenco music and dance, and indulge in the delicious local cuisine, including tapas and paella. Discover the picturesque white-washed villages of Ronda and Mijas, nestled in the mountains, and soak up the sun on the beautiful beaches of the Costa del Sol. Whether you're interested in history, art, or simply enjoying the laid-back Mediterranean lifestyle, Andalusia has something for everyone.</p>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
                 </div>
-                <div class="trip-block">
-                    <h3>Must See Spain (7/12/20 Days)</h3>
-                    <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                    <a href="#" class="btn btn-primary">Learn more</a>
+                <div class="card trip-card">
+                    <img src="resources/pexels-mikhail-nilov-8430374.jpg" class="card-img-top" alt="Must See Spain">
+                    <div class="card-body">
+                        <h5 class="card-title">Must See Spain (7/12/20 Days)</h5>
+                        <p class="card-text">Spain is a diverse and captivating country that offers a wide range of must-see attractions. From vibrant cities to stunning natural landscapes, here are some of the top destinations to explore:</p>
+                        <ul>
+                            <li>Madrid: The capital city of Spain, known for its rich history, art museums, and vibrant nightlife.</li>
+                            <li>Barcelona: A vibrant city located on the northeastern coast, famous for its unique architecture and lively atmosphere.</li>
+                            <li>Seville: The cultural heart of Andalusia, known for its stunning Moorish architecture and flamenco dancing.</li>
+                            <li>Granada: Home to the iconic Alhambra Palace, a UNESCO World Heritage site, and the charming Albaicin neighborhood.</li>
+                            <li>Valencia: A coastal city known for its futuristic architecture, beautiful beaches, and delicious paella.</li>
+                            <li>San Sebastian: A food lover's paradise, famous for its pintxos (Basque tapas) and beautiful beaches.</li>
+                            <li>Toledo: A historic city known for its medieval architecture and rich cultural heritage.</li>
+                            <li>Costa del Sol: A popular tourist destination with beautiful beaches, luxury resorts, and vibrant nightlife.</li>
+                        </ul>
+                        <p>These are just a few highlights, and there are many more incredible places to explore in Spain. Whether you're interested in history, art, food, or simply enjoying the Mediterranean lifestyle, Spain has something for everyone.</p>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
                 </div>
-                <div class="trip-block">
-                    <h3>Party in Spain</h3>
-                    <p>Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
-                    <a href="#" class="btn btn-primary">Learn more</a>
+                <div class="card trip-card">
+                    <img src="resources/pexels-apasaric-2078008.jpg" class="card-img-top" alt="Party in Spain">
+                    <div class="card-body">
+                        <h5 class="card-title">Party in Spain</h5>
+                        <p class="card-text">Spain is renowned for its vibrant nightlife and is a popular party destination. From the bustling clubs of Ibiza to the lively streets of Barcelona, there are plenty of options for partygoers. Experience the energetic atmosphere, dance to the latest music, and enjoy a wide variety of drinks and cocktails. Whether you're into electronic music, hip-hop, or live performances, Spain offers a diverse range of venues and events to suit every taste. Don't miss out on the opportunity to party in Spain and create unforgettable memories.</p>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
                 </div>
             </div>
         </div>
