@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Consultancy Startup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+        }
+        .navbar {
+            padding: 1rem 2rem;
+        }
+        .header-section {
+            position: relative;
+            height: 50vh;
+        }
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .header-content {
+            padding-top: 100px;
+            z-index: 1;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .carousel-item {
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .card {
+            border: none;
+        }
+        .card-title {
+            font-size: 1.25rem;
+        }
+        .contact-section {
+            background: #f8f9fa;
+        }
+        .bg-body-tertiary {
+            background: #b4d8ff;
+        }
+        .rounded-3 {
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Travel Consultancy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section with Carousel -->
+    <header id="home" class="header-section">
+        <div id="headerCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('resources/pexels-vlada-karpovich-7368300.jpg');">
+                    <div class="header-overlay"></div>
+                    <div class="header-content d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="display-4">Welcome to Your Personal Travel Consultancy</h1>
+                        <p class="lead">Your dream destinations are just a click away</p>
+                        <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('resources/pexels-life-of-pix-3540.jpg');">
+                    <div class="header-overlay"></div>
+                    <div class="header-content d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="display-4">Want to experience this?</h1>
+                        <p class="lead">Explore the best travel packages to spain at unbeatable prices</p>
+                        <a href="services.html" class="btn btn-primary btn-lg">Explore our packages</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('resources/pexels-picjumbo-com-55570-196644.jpg');">
+                    <div class="header-overlay"></div>
+                    <div class="header-content d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="display-4">Coming soon</h1>
+                        <p class="lead">But try our demo now!</p>
+                        <a href="#services" class="btn btn-primary btn-lg">Explore demo</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#headerCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#headerCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Flight Search Form -->
+    <section class="flight-search-section m-5">
+        <div class="container p-5 text-left bg-body-tertiary rounded-3">
+            <div class="text-center mb-4">
+                <h2 class="section-title">Compare and Save</h2>
+                <p class="lead">Discover the perfect vacation.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form class="row g-3">
+                        <div class="form-group col-md-6">
+                            <label for="to">To</label>
+                            <input type="text" class="form-control" id="to" placeholder="Where to?">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="departure">Departure</label>
+                            <input type="date" class="form-control" id="departure">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="return">Return</label>
+                            <input type="date" class="form-control" id="return">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="travellers">Travellers</label>
+                            <input type="text" class="form-control" id="to" placeholder="1, 2, 3, ...">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Search Flights</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section text-center py-5">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Personalized Travel Planning</h5>
+                            <p class="card-text">Tailored itineraries just for you, crafted with experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Exclusive Deals</h5>
+                            <p class="card-text">Access to exclusive travel deals and pre planned packages tailored specifically for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Stress free vacation</h5>
+                            <p class="card-text">Leave the stress at home and enjoy, regardless of your idea on a perfect trip.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Section -->
+    <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">See the world. <span class="text-body-secondary">It can be so easy.</span></h2>
+            <p class="lead">Explore the options and see new destinations today. It's easy, fast and safe.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <image href="resources/Around the world-rafiki.svg" width="500" height="500" />
+            </svg>
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Traveling with a group. <span class="text-body-secondary">Can't decide on a plan?</span></h2>
+            <p class="lead">Try out our group planning tool to help you understand each other better so everyone can get the most ou of the trip.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <image href="resources/Group discussion-rafiki.svg" width="500" height="500" />    
+            </svg>
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Forgot something? <span class="text-body-secondary">We go you covered.</span></h2>
+            <p class="lead">Our planning tool also includes an individual packing list for the essentials so you don't have to worry. Just enjoy your well deserved trip.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <image href="resources/Travel insurance-rafiki.svg" width="500" height="500" /> 
+            </svg>
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <!-- /END THE FEATURETTES -->
+    
+      </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section text-center py-5">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <a>Please let us know what you think about our idea</a>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // When the user presses submit on the contact form send an email
+        $("form").submit(function(e) {
+            e.preventDefault();
+
+            //create new file for the email
+            var email = new FormData();
+
+            email.append("message", $("#message").val());
+            email.append("name", $("#name").val());
+            
+            window.open("mailto:studym8ai@gmail.com" + "?subject=Feedback - TailoredTravel&body=" + $("#message").val());
+
+            // Clear the form
+            $(this).trigger("reset");
+        });
+    </script>
+</body>
+</html>
