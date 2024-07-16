@@ -1,239 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Planner</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
-        .card {
-            margin: 10px 0;
-        }
-        .card-header {
-            font-weight: bold;
-        }
-        .option-box {
-            border: 1px solid #d4d9df;
-            padding: 10px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .option-item {
-            cursor: grab;
-            margin-bottom: 5px;
-            padding: 5px;
-            border: 1px solid #d4d9df;
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-        .option-item img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 5px;
-        }
-        .option-item:hover {
-            background-color: #e2e6ea;
-        }
-        .timeline {
-            list-style: none;
-            padding: 0;
-            position: relative;
-        }
-        .timeline::before {
-            background: #d4d9df;
-            content: '';
-            left: 50%;
-            position: absolute;
-            top: 0;
-            width: 2px;
-            height: 100%;
-        }
-        .timeline-item {
-            margin: 10px 0;
-            position: relative;
-            width: 45%;
-            min-height: 80px;
-            padding: 10px;
-            border: 1px solid #d4d9df;
-            background-color: #f8f9fa;
-        }
-        .timeline-item-left {
-            left: 0;
-            padding-right: 30px;
-            text-align: right;
-        }
-        .timeline-item-right {
-            left: 55%;
-            padding-left: 30px;
-        }
-        .timeline-item::after {
-            background: white;
-            border: 3px solid #6c757d;
-            border-radius: 50%;
-            content: '';
-            height: 20px;
-            left: 50%;
-            position: absolute;
-            top: 15px;
-            width: 20px;
-            z-index: 1;
-        }
-        .dropzone {
-            border: 2px dashed #007bff;
-            background-color: #e2e6ea;
-            min-height: 50px;
-            margin-top: 10px;
-            padding: 10px;
-        }
-        .summary {
-            margin-top: 10px;
-        }
+      .card {
+        margin: 10px 0;
+      }
+      .card-header {
+        font-weight: bold;
+      }
+      .option-box {
+        border: 1px solid #d4d9df;
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .option-item {
+        cursor: grab;
+        margin-bottom: 5px;
+        padding: 5px;
+        border: 1px solid #d4d9df;
+        background-color: #f8f9fa;
+        text-align: center;
+      }
+      .option-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+      }
+      .option-item:hover {
+        background-color: #e2e6ea;
+      }
+      .timeline {
+        list-style: none;
+        padding: 0;
+        position: relative;
+      }
+      .timeline::before {
+        background: #d4d9df;
+        content: "";
+        left: 50%;
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 100%;
+      }
+      .timeline-item {
+        margin: 10px 0;
+        position: relative;
+        width: 45%;
+        min-height: 80px;
+        padding: 10px;
+        border: 1px solid #d4d9df;
+        background-color: #f8f9fa;
+      }
+      .timeline-item-left {
+        left: 0;
+        padding-right: 30px;
+        text-align: right;
+      }
+      .timeline-item-right {
+        left: 55%;
+        padding-left: 30px;
+      }
+      .timeline-item::after {
+        background: white;
+        border: 3px solid #6c757d;
+        border-radius: 50%;
+        content: "";
+        height: 20px;
+        left: 50%;
+        position: absolute;
+        top: 15px;
+        width: 20px;
+        z-index: 1;
+      }
+      .dropzone {
+        border: 2px dashed #007bff;
+        background-color: #e2e6ea;
+        min-height: 50px;
+        margin-top: 10px;
+        padding: 10px;
+      }
+      .summary {
+        margin-top: 10px;
+      }
     </style>
-</head>
-<body>
-
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="index.html">Travel Consultancy</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="index.html">Travel Consultancy</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<div class="container mt-5 pt-5">
-    <div class="row">
+    <div class="container mt-5 pt-5">
+      <div class="row">
         <!-- Main Content -->
         <div class="col-md-9 mx-auto">
-            <h1 class="text-center mb-3">Travel Planner</h1>
-            
-            <div class="row">
-                <!-- Input Form -->
-                <div class="col-md-6">
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            Plan Your Trip
-                        </div>
-                        <div class="card-body">
-                            <form id="tripForm">
-                                <div class="form-group">
-                                    <label for="location">Location to Visit</label>
-                                    <input type="text" class="form-control" id="location" placeholder="Enter location" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="days">Number of Days</label>
-                                    <input type="number" class="form-control" id="days" placeholder="Enter number of days" required min="1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="persons">Number of Persons</label>
-                                    <input type="number" class="form-control" id="persons" placeholder="Enter number of persons" required min="1">
-                                </div>
-                                <button type="button" class="btn btn-primary" onclick="planTrip()">Plan Trip</button>
-                            </form>
-                        </div>
-                    </div>
+          <h1 class="text-center mb-3">Travel Planner</h1>
 
-                    <!-- Summary -->
-                    <div class="summary">
-                        <h2>Trip Summary</h2>
-                        <div id="summary-content">
-                            <p>No selections made yet.</p>
-                        </div>
-                        <div id="total-cost">
-                            <p><strong>Total Cost:</strong> 0€</p>
-                        </div>
+          <div class="row">
+            <!-- Input Form -->
+            <div class="col-md-6">
+              <div class="card mb-3">
+                <div class="card-header">Plan Your Trip</div>
+                <div class="card-body">
+                  <form id="tripForm">
+                    <div class="form-group">
+                      <label for="location">Location to Visit</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="location"
+                        placeholder="Enter location"
+                        required
+                      />
                     </div>
+                    <div class="form-group">
+                      <label for="days">Number of Days</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="days"
+                        placeholder="Enter number of days"
+                        required
+                        min="1"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="persons">Number of Persons</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="persons"
+                        placeholder="Enter number of persons"
+                        required
+                        min="1"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="planTrip()"
+                    >
+                      Plan Trip
+                    </button>
+                  </form>
                 </div>
+              </div>
 
-                <!-- Timeline -->
-                <div class="col-md-6">
-                    <ul id="timeline" class="timeline"></ul>
+              <!-- Summary -->
+              <div class="summary">
+                <h2>Trip Summary</h2>
+                <div id="summary-content">
+                  <p>No selections made yet.</p>
                 </div>
+                <div id="total-cost">
+                  <p><strong>Total Cost:</strong> 0€</p>
+                </div>
+              </div>
             </div>
-            
-            <!-- Options -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="option-box" id="transportation-options">
-                        <h3>Transportation</h3>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="flight" data-name="Flight 1" data-price="100" data-duration="1h">
-                            Flight 1 (100€, 1h)
-                        </div>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="flight" data-name="Flight 2" data-price="150" data-duration="1.5h">
-                            Flight 2 (150€, 1.5h)
-                        </div>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="returnFlight" data-name="Return Flight 1" data-price="100" data-duration="1h">
-                            Return Flight 1 (100€, 1h)
-                        </div>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="returnFlight" data-name="Return Flight 2" data-price="150" data-duration="1.5h">
-                            Return Flight 2 (150€, 1.5h)
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="option-box" id="accommodation-options">
-                        <h3>Accommodation</h3>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="hotel" data-name="Hotel 1" data-price="150" data-duration="1 night">
-                            Hotel 1 (150€, 1 night)
-                        </div>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="hotel" data-name="Hotel 2" data-price="175" data-duration="1 night">
-                            Hotel 2 (175€, 1 night)
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="option-box" id="activities-options">
-                        <h3>Activities</h3>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="activity" data-name="Museum Visit" data-price="10" data-duration="1hr">
-                            Museum Visit (10€, 1hr)
-                        </div>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="activity" data-name="Sightseeing Tour" data-price="20" data-duration="2hrs">
-                            Sightseeing Tour (20€, 2hrs)
-                        </div>
-                        <div class="option-item" draggable="true" ondragstart="dragStart(event)" data-type="activity" data-name="Boat Ride" data-price="30" data-duration="3hrs">
-                            Boat Ride (30€, 3hrs)
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Timeline -->
+            <div class="col-md-6">
+              <ul id="timeline" class="timeline"></ul>
             </div>
+          </div>
+
+          <!-- Options -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="option-box" id="transportation-options">
+                <h3>Transportation</h3>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="flight"
+                  data-name="Flight 1"
+                  data-price="100"
+                  data-duration="1h"
+                >
+                  Flight 1 (100€, 1h)
+                  <div class="user-badges">
+                    <span
+                      class="badge badge-primary user-badge"
+                      data-user="User 1"
+                      >User 1 <span class="badge badge-light">x</span></span
+                    >
+                    <span
+                      class="badge badge-secondary user-badge"
+                      data-user="User 2"
+                      >User 2 <span class="badge badge-light">x</span></span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="flight"
+                  data-name="Flight 2"
+                  data-price="150"
+                  data-duration="1.5h"
+                >
+                  Flight 2 (150€, 1.5h)
+                  <div class="user-badges">
+                    <span
+                      class="badge badge-primary user-badge"
+                      data-user="User 1"
+                      >User 1 <span class="badge badge-light">x</span></span
+                    >
+                    <span
+                      class="badge badge-secondary user-badge"
+                      data-user="User 2"
+                      >User 2 <span class="badge badge-light">x</span></span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="returnFlight"
+                  data-name="Return Flight 1"
+                  data-price="100"
+                  data-duration="1h"
+                >
+                  Return Flight 1 (100€, 1h)
+                  <div class="user-badges">
+                    <span
+                      class="badge badge-primary text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill"
+                      data-user="User 1"
+                      >User 1 <span class="badge badge-light">x</span></span
+                    >
+                    <span
+                      class="badge badge-secondary user-badge"
+                      data-user="User 2"
+                      >User 2 <span class="badge badge-light">x</span></span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="returnFlight"
+                  data-name="Return Flight 2"
+                  data-price="150"
+                  data-duration="1.5h"
+                >
+                  Return Flight 2 (150€, 1.5h)
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="option-box" id="accommodation-options">
+                <h3>Accommodation</h3>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="hotel"
+                  data-name="Hotel 1"
+                  data-price="150"
+                  data-duration="1 night"
+                >
+                  Hotel 1 (150€, 1 night)
+                </div>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="hotel"
+                  data-name="Hotel 2"
+                  data-price="175"
+                  data-duration="1 night"
+                >
+                  Hotel 2 (175€, 1 night)
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="option-box" id="activities-options">
+                <h3>Activities</h3>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="activity"
+                  data-name="Museum Visit"
+                  data-price="10"
+                  data-duration="1hr"
+                >
+                  Museum Visit (10€, 1hr)
+                </div>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="activity"
+                  data-name="Sightseeing Tour"
+                  data-price="20"
+                  data-duration="2hrs"
+                >
+                  Sightseeing Tour (20€, 2hrs)
+                </div>
+                <div
+                  class="option-item"
+                  draggable="true"
+                  ondragstart="dragStart(event)"
+                  data-type="activity"
+                  data-name="Boat Ride"
+                  data-price="30"
+                  data-duration="3hrs"
+                >
+                  Boat Ride (30€, 3hrs)
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    let selectedOptions = {
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      let selectedOptions = {
         flight: null,
         hotel: null,
         activities: [],
-        returnFlight: null
-    };
+        returnFlight: null,
+      };
 
-    function planTrip() {
-        const location = document.getElementById('location').value;
-        const days = parseInt(document.getElementById('days').value);
-        const persons = parseInt(document.getElementById('persons').value);
-        
-        const timeline = document.getElementById('timeline');
-        timeline.innerHTML = '';
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".user-badge").forEach((badge) => {
+          badge.addEventListener("click", function () {
+            this.classList.toggle("selected");
+          });
+        });
+      });
+
+      function dragStart(event) {
+        const data = {
+          type: event.target.dataset.type,
+          name: event.target.dataset.name,
+          price: event.target.dataset.price,
+          duration: event.target.dataset.duration,
+        };
+        event.dataTransfer.setData("text/plain", JSON.stringify(data));
+        event.dataTransfer.effectAllowed = "move";
+      }
+
+      function planTrip() {
+        const location = document.getElementById("location").value;
+        const days = parseInt(document.getElementById("days").value);
+        const persons = parseInt(document.getElementById("persons").value);
+
+        const timeline = document.getElementById("timeline");
+        timeline.innerHTML = "";
 
         // Adding days block
         for (let i = 1; i <= days; i++) {
-            timeline.innerHTML += `
+          timeline.innerHTML += `
                 <li class="timeline-item timeline-item-left">
                     <div class="card">
                         <div class="card-header">Day ${i}</div>
@@ -246,101 +407,166 @@
 
         // Reset selected options
         selectedOptions = {
-            flight: null,
-            hotel: null,
-            activities: Array(days).fill([]).map(() => []),
-            returnFlight: null
+          flight: null,
+          hotel: null,
+          activities: Array(days)
+            .fill([])
+            .map(() => []),
+          returnFlight: null,
         };
         updateSummary();
-    }
+      }
 
-    function dragStart(event) {
-        const data = {
-            type: event.target.dataset.type,
-            name: event.target.dataset.name,
-            price: event.target.dataset.price,
-            duration: event.target.dataset.duration
-        };
-        event.dataTransfer.setData('text/plain', JSON.stringify(data));
-        event.dataTransfer.effectAllowed = 'move';
-    }
-
-    function dragOver(event) {
+      function drop(event, day) {
         event.preventDefault();
-        event.dataTransfer.dropEffect = 'move';
-    }
-
-    function drop(event, day) {
-        event.preventDefault();
-        const data = JSON.parse(event.dataTransfer.getData('text/plain'));
+        const data = JSON.parse(event.dataTransfer.getData("text/plain"));
         const dropzone = event.target;
 
-        const itemDiv = document.createElement('div');
-        itemDiv.textContent = `${data.name} (${data.price}€, ${data.duration})`;
-        itemDiv.setAttribute('data-type', data.type);
-        itemDiv.setAttribute('data-name', data.name);
-        itemDiv.setAttribute('data-price', data.price);
-        itemDiv.setAttribute('data-duration', data.duration);
-        itemDiv.addEventListener('click', () => removeItem(day, data.type, data.name, itemDiv));
+        const itemDiv = document.createElement("div");
+        itemDiv.innerHTML = `${data.name} (${data.price}€, ${
+          data.duration
+        }) - ${data.users.join(", ")}`;
+        itemDiv.setAttribute("data-type", data.type);
+        itemDiv.setAttribute("data-name", data.name);
+        itemDiv.setAttribute("data-price", data.price);
+        itemDiv.setAttribute("data-duration", data.duration);
+        itemDiv.setAttribute("data-users", data.users.join(", "));
+        itemDiv.addEventListener("click", () =>
+          removeItem(day, data.type, data.name, itemDiv)
+        );
         dropzone.appendChild(itemDiv);
 
-        if (data.type === 'activity') {
-            selectedOptions.activities[day - 1].push(data);
+        // When adding flight data to selectedOptions, ensure 'users' is included
+        if (data.type === "flight") {
+          if (!data.users) {
+            data.users = []; // Initialize with an empty array or default value
+          }
+          selectedOptions[data.type] = data;
+        } else if (data.type === "activity") {
+          selectedOptions.activities[day - 1].push(data);
         } else {
-            selectedOptions[data.type] = data;
+          selectedOptions[data.type] = data;
         }
         updateSummary();
-    }
+      }
 
-    function removeItem(day, type, name, itemDiv) {
-        if (type === 'activity') {
-            selectedOptions.activities[day - 1] = selectedOptions.activities[day - 1].filter(activity => activity.name !== name);
+      function drop(event, day) {
+        event.preventDefault();
+        const data = JSON.parse(event.dataTransfer.getData("text/plain"));
+        const dropzone = event.target;
+
+        const itemDiv = document.createElement("div");
+        itemDiv.textContent = `${data.name} (${data.price}€, ${data.duration}) - ${data.user}`;
+        itemDiv.setAttribute("data-type", data.type);
+        itemDiv.setAttribute("data-name", data.name);
+        itemDiv.setAttribute("data-price", data.price);
+        itemDiv.setAttribute("data-duration", data.duration);
+        itemDiv.setAttribute("data-user", data.user);
+        itemDiv.addEventListener("click", () =>
+          removeItem(day, data.type, data.name, itemDiv)
+        );
+        dropzone.appendChild(itemDiv);
+
+        if (data.type === "flight") {
+          if (!data.users) {
+            data.users = []; // Initialize with an empty array or default value
+          }
+          selectedOptions[data.type] = data;
+        } else if (data.type === "activity") {
+          selectedOptions.activities[day - 1].push(data);
         } else {
-            selectedOptions[type] = null;
+          selectedOptions[data.type] = data;
         }
-        itemDiv.remove();
         updateSummary();
-    }
+      }
 
-    function updateSummary() {
-        const summaryContent = document.getElementById('summary-content');
+      function updateSummary() {
+        const summaryContent = document.getElementById("summary-content");
         let totalCost = 0;
-        let summaryHtml = '<ul>';
+        let summaryHtml = "<ul>";
 
         if (selectedOptions.flight) {
-            totalCost += parseInt(selectedOptions.flight.price);
-            summaryHtml += `<li><strong>Flight:</strong> ${selectedOptions.flight.name} - ${selectedOptions.flight.price}€, ${selectedOptions.flight.duration}</li>`;
+          totalCost += parseInt(selectedOptions.flight.price);
+          summaryHtml += `<li><strong>Flight:</strong> ${
+            selectedOptions.flight.name
+          } - ${selectedOptions.flight.price}€, ${
+            selectedOptions.flight.duration
+          } - ${selectedOptions.flight.users.join(", ")}</li>`;
         }
 
         if (selectedOptions.hotel) {
-            totalCost += parseInt(selectedOptions.hotel.price);
-            summaryHtml += `<li><strong>Hotel:</strong> ${selectedOptions.hotel.name} - ${selectedOptions.hotel.price}€, ${selectedOptions.hotel.duration}</li>`;
+          totalCost += parseInt(selectedOptions.hotel.price);
+          summaryHtml += `<li><strong>Hotel:</strong> ${
+            selectedOptions.hotel.name
+          } - ${selectedOptions.hotel.price}€, ${
+            selectedOptions.hotel.duration
+          } - ${selectedOptions.hotel.users.join(", ")}</li>`;
         }
 
         if (selectedOptions.activities.length > 0) {
-            selectedOptions.activities.forEach((activities, index) => {
-                if (activities.length > 0) {
-                    summaryHtml += `<li><strong>Day ${index + 1} Activities:</strong><ul class="activity-list">`;
-                    activities.forEach(activity => {
-                        totalCost += parseInt(activity.price);
-                        summaryHtml += `<li>${activity.name} - ${activity.price}€, ${activity.duration}</li>`;
-                    });
-                    summaryHtml += `</ul></li>`;
-                }
-            });
+          selectedOptions.activities.forEach((activities, index) => {
+            if (activities.length > 0) {
+              summaryHtml += `<li><strong>Day ${
+                index + 1
+              } Activities:</strong><ul class="activity-list">`;
+              activities.forEach((activity) => {
+                totalCost += parseInt(activity.price);
+                summaryHtml += `<li>${activity.name} - ${activity.price}€, ${
+                  activity.duration
+                } - ${activity.users.join(", ")}</li>`;
+              });
+              summaryHtml += `</ul></li>`;
+            }
+          });
         }
 
         if (selectedOptions.returnFlight) {
-            totalCost += parseInt(selectedOptions.returnFlight.price);
-            summaryHtml += `<li><strong>Return Flight:</strong> ${selectedOptions.returnFlight.name} - ${selectedOptions.returnFlight.price}€, ${selectedOptions.returnFlight.duration}</li>`;
+          totalCost += parseInt(selectedOptions.returnFlight.price);
+          summaryHtml += `<li><strong>Return Flight:</strong> ${
+            selectedOptions.returnFlight.name
+          } - ${selectedOptions.returnFlight.price}€, ${
+            selectedOptions.returnFlight.duration
+          } - ${selectedOptions.returnFlight.users.join(", ")}</li>`;
         }
 
-        summaryHtml += '</ul>';
+        summaryHtml += "</ul>";
         summaryContent.innerHTML = summaryHtml;
-        
-        const totalCostElement = document.getElementById('total-cost');
+
+        const totalCostElement = document.getElementById("total-cost");
         totalCostElement.innerHTML = `<p><strong>Total Cost:</strong> ${totalCost}€</p>`;
-    }
-</script>
-</body>
+      }
+
+      function dragOver(event) {
+        event.preventDefault();
+        event.dataTransfer.dropEffect = "move";
+      }
+
+      function removeItem(day, type, name, itemDiv) {
+        if (type === "activity") {
+          selectedOptions.activities[day - 1] = selectedOptions.activities[
+            day - 1
+          ].filter((activity) => activity.name !== name);
+        } else {
+          selectedOptions[type] = null;
+        }
+        itemDiv.remove();
+        updateSummary();
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4VVXYF35WD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4VVXYF35WD");
+    </script>
+  </body>
 </html>
