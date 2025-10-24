@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Xvobs — Portfolio</title>
+  <meta name="description" content="Portfolio of Xvobs — developer, designer, maker." />
+
+  <!-- Tailwind CSS via Play CDN (good for quick demos). For production, build Tailwind locally. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Optional Tailwind config for the CDN
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7c3aed',
+            accent: '#06b6d4'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Small utility for smooth scrolling on supported browsers */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+  <!-- NAV -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="flex items-center space-x-3">
+          <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+            <path d="M7 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          <span class="font-semibold text-lg">Xvobs</span>
+        </a>
+
+        <nav class="hidden md:flex space-x-6 items-center text-sm">
+          <a href="#about" class="hover:text-primary">About</a>
+          <a href="#projects" class="hover:text-primary">Projects</a>
+          <a href="#skills" class="hover:text-primary">Skills</a>
+          <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-md hover:opacity-95">Contact</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="mobile-menu-button" aria-label="Toggle menu" class="p-2 rounded-md inline-flex items-center justify-center hover:bg-gray-100">
+            <svg id="icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden">
+      <div class="px-4 pt-2 pb-4 space-y-1">
+        <a href="#about" class="block px-2 py-1 rounded hover:bg-gray-100">About</a>
+        <a href="#projects" class="block px-2 py-1 rounded hover:bg-gray-100">Projects</a>
+        <a href="#skills" class="block px-2 py-1 rounded hover:bg-gray-100">Skills</a>
+        <a href="#contact" class="block px-2 py-1 rounded bg-primary text-white">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="bg-gradient-to-r from-white to-gray-50 pt-12 pb-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+              Hi, I'm Xvobs.
+            </h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl">
+              I build delightful web experiences and solve real problems with clean code and thoughtful design. I focus on full-stack development, accessibility, and performance.
+            </p>
+
+            <div class="mt-6 flex items-center space-x-4">
+              <a href="#projects" class="inline-flex items-center px-5 py-3 bg-primary text-white rounded-md shadow hover:opacity-95">
+                View projects
+              </a>
+              <a href="#contact" class="text-sm font-medium text-primary hover:underline">Get in touch →</a>
+            </div>
+
+            <div class="mt-6 flex items-center space-x-3 text-sm text-gray-500">
+              <span>Based in</span>
+              <span class="px-2 py-1 bg-white border rounded">Your City</span>
+              <span>•</span>
+              <span>Open to work</span>
+            </div>
+          </div>
+
+          <div class="order-first md:order-last">
+            <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow p-6">
+              <div class="h-40 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white font-semibold">
+                <div class="text-center">
+                  <div class="text-xl">Featured</div>
+                  <div class="text-sm mt-1">Project highlight or an image goes here</div>
+                </div>
+              </div>
+              <div class="mt-4 text-sm text-gray-600">
+                Quick summary: show a key metric, a recent launch, or a note about your workflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl font-bold">About</h2>
+        <p class="mt-4 text-gray-600">
+          I'm a developer who enjoys building clean, maintainable web applications. My focus is on shipping production-ready features, improving user experience, and collaborating with cross-functional teams.
+        </p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-3">
+            <h3 class="font-semibold">What I do</h3>
+            <ul class="list-disc pl-5 text-gray-600 space-y-2">
+              <li>Frontend development using modern tools (React, Vue, or plain JS)</li>
+              <li>API design and integration</li>
+              <li>Performance and accessibility improvements</li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <h3 class="font-semibold">Interests</h3>
+            <p class="text-gray-600">Open-source, developer tooling, design systems, learning about distributed systems, and mentoring.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Projects</h2>
+          <a href="#projects" class="text-sm text-gray-500">See all →</a>
+        </div>
+
+        <div id="projects-grid" class="mt-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Project cards will be injected by JS from data/projects.json -->
+          <div class="col-span-full text-gray-400">Loading projects...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl font-bold">Skills</h2>
+        <p class="mt-3 text-gray-600">Technologies and tools I use frequently.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="px-3 py-1 rounded bg-gray-100 text-gray-800">JavaScript</span>
+          <span class="px-3 py-1 rounded bg-gray-100 text-gray-800">TypeScript</span>
+          <span class="px-3 py-1 rounded bg-gray-100 text-gray-800">React</span>
+          <span class="px-3 py-1 rounded bg-gray-100 text-gray-800">Node.js</span>
+          <span class="px-3 py-1 rounded bg-gray-100 text-gray-800">Tailwind CSS</span>
+          <span class="px-3 py-1 rounded bg-gray-100 text-gray-800">Git</span>
+          <span class="px-3 py-1 rounded bg-gray-100 text-gray-800">Docker</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-gray-50 to-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="bg-white rounded-xl p-8 shadow">
+          <h2 class="text-2xl font-bold">Contact</h2>
+          <p class="mt-3 text-gray-600">I'm available for projects and collaborations. Send me a message.</p>
+
+          <div class="mt-6 space-y-4">
+            <a class="block w-full text-center px-4 py-3 bg-primary text-white rounded-md" href="mailto:hello@example.com">Email me</a>
+            <div class="flex items-center justify-center space-x-4 text-sm text-gray-600">
+              <a href="https://github.com/Xvobs" target="_blank" rel="noopener" class="hover:text-primary">GitHub</a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener" class="hover:text-primary">Twitter</a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="hover:text-primary">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-6 text-sm text-gray-500 flex items-center justify-between">
+      <div>© <span id="year"></span> Xvobs</div>
+      <div>Made with ❤️ • <a href="#" class="hover:underline">Privacy</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
