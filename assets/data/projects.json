@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Cloud Infrastructure Automation",
+    "description": "Automated cloud infrastructure deployment using Infrastructure as Code (IaC) principles with Terraform and AWS.",
+    "tags": ["AWS", "Terraform", "DevOps", "Python"],
+    "github": "https://github.com/Xvobs",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "title": "Microservices Architecture",
+    "description": "Designed and implemented a scalable microservices architecture for a high-traffic e-commerce platform.",
+    "tags": ["Docker", "Kubernetes", "Node.js", "PostgreSQL"],
+    "github": "https://github.com/Xvobs",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "title": "Real-time Analytics Dashboard",
+    "description": "Built a real-time analytics dashboard with WebSocket connections and data visualization.",
+    "tags": ["React", "TypeScript", "WebSockets", "D3.js"],
+    "github": "https://github.com/Xvobs",
+    "demo": "",
+    "featured": false
+  },
+  {
+    "title": "API Gateway & Service Mesh",
+    "description": "Implemented an API gateway and service mesh solution for improved security and observability.",
+    "tags": ["Kong", "Istio", "gRPC", "Go"],
+    "github": "https://github.com/Xvobs",
+    "demo": "",
+    "featured": false
+  },
+  {
+    "title": "CI/CD Pipeline Optimization",
+    "description": "Optimized CI/CD pipelines reducing deployment time by 60% and improving reliability.",
+    "tags": ["GitHub Actions", "Jenkins", "Docker", "ArgoCD"],
+    "github": "https://github.com/Xvobs",
+    "demo": "",
+    "featured": false
+  },
+  {
+    "title": "Monitoring & Observability Stack",
+    "description": "Implemented comprehensive monitoring and observability using modern cloud-native tools.",
+    "tags": ["Prometheus", "Grafana", "ELK Stack", "OpenTelemetry"],
+    "github": "https://github.com/Xvobs",
+    "demo": "",
+    "featured": false
+  }
+]
