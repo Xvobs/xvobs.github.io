@@ -50,8 +50,8 @@ async function loadProjects() {
           ${project.tags.map(tag => `<span class="text-xs px-2 py-1 bg-gray-100 rounded">${escapeHtml(tag)}</span>`).join('')}
         </div>
         <div class="flex items-center space-x-3 text-sm">
-          ${project.github ? `<a href="${escapeHtml(project.github)}" target="_blank" rel="noopener" class="text-primary hover:underline">GitHub →</a>` : ''}
-          ${project.demo ? `<a href="${escapeHtml(project.demo)}" target="_blank" rel="noopener" class="text-primary hover:underline">Demo →</a>` : ''}
+          ${project.github && isValidUrl(project.github) ? `<a href="${escapeHtml(project.github)}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">GitHub →</a>` : ''}
+          ${project.demo && isValidUrl(project.demo) ? `<a href="${escapeHtml(project.demo)}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Demo →</a>` : ''}
         </div>
       </div>
     `).join('');
@@ -66,4 +66,15 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+// Helper function to validate URLs
+function isValidUrl(urlString) {
+  try {
+    const url = new URL(urlString);
+    // Only allow http and https protocols
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch (error) {
+    return false;
+  }
 }
